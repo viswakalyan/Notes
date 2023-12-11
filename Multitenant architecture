@@ -1,0 +1,23 @@
+Multitenant architecture is a software architecture in which a single instance of a software application serves multiple customers or tenants. 
+Each customer, also known as a tenant, is logically isolated from others, and they may have their own data, configurations, and user interfaces. 
+This approach is commonly used in cloud-based SaaS (Software as a Service) applications where the goal is to efficiently share computing resources among multiple users or organizations.
+
+Here are some key characteristics and considerations of multitenant architecture:
+
+1. **Logical Isolation:** Tenants are logically isolated from each other, meaning they operate as if they have their own instance of the application, even though they are sharing the same underlying infrastructure and codebase.
+
+2. **Data Isolation:** Each tenant typically has its own set of data, which is kept separate from the data of other tenants. This is crucial for maintaining data privacy and security.
+
+3. **Configuration Isolation:** Tenants may have different configurations, such as custom settings, themes, or business rules. The system must support this customization without affecting other tenants.
+
+4. **Scalability:** Multitenancy allows for efficient use of resources since multiple tenants share the same infrastructure. This makes it easier to scale the application horizontally by adding more resources as the number of tenants or the workload increases.
+
+5. **Upgrades and Maintenance:** Upgrading the software or performing maintenance tasks can be challenging in a multitenant environment. Changes must be applied in a way that minimizes disruption to all tenants.
+
+6. **Security:** Robust security measures are essential to ensure that one tenant cannot access another tenant's data or interfere with their operations. Access controls and encryption are commonly employed to address security concerns.
+
+7. **Performance:** The architecture should be designed to provide good performance for each tenant, and mechanisms such as resource allocation and throttling may be implemented to prevent one tenant from adversely affecting others.
+
+8. **Cost-Effective:** Multitenancy is often chosen for its cost-effectiveness, as it allows for the efficient use of resources and reduces the need for separate instances for each tenant.
+
+There are different approaches to implementing multitenancy, such as shared database, shared schema, and separate schema. The choice depends on the specific requirements and considerations of the application and its tenants.
